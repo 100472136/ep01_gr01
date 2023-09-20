@@ -29,12 +29,13 @@
     width: 40%;
 }
 
-#column-left > div
+#column-right
 {
-    width:100%;
+    width:60%;
+    flex-flow: column wrap;
 }
 
-.title-container
+#title-container
 {
     display: flex;
     flex-direction: column;
@@ -43,18 +44,18 @@
     height: 30%;
 }
 
-.title-container > h1
+#title-container > h1
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 400%;
 }
 
-.title-container > h2
+#title-container > h2
 {
     font-size: 150%;
 }
 
-.video-container
+#video-container
 {
     display: flex;
     align-items: center;
@@ -62,18 +63,12 @@
     height: 70%;
 }
 
-.video
+#video
 {
     --size:90%;
     width: var(--size);
     height: var(--size);
     object-fit: scale-down;
-}
-
-#column-right
-{
-    width:60%;
-    flex-flow: row wrap;
 }
 
 a
@@ -85,12 +80,12 @@ a
 .index-box
 {
     --width:50%;
-    --height:33.3333333%;
-    --margin:0.5%;
+    --height:33%;
+    --margins:0.5%;
 
-    margin: var(--margin);
-    width: calc(var(--width) - 2*var(--margin));
-    height: calc(var(--height) - 2*var(--margin));
+    margin: var(--margins);
+    width: calc(var(--width) - 2*var(--margins));
+    height: calc(var(--height) - 2*var(--margins));
 
     transition: all 0.3s ease;
     display: flex;
