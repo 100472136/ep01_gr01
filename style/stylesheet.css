@@ -3,13 +3,14 @@
 {
     box-sizing: border-box;
     margin:0;
+    overflow-x:hidden;
 }
 
 .page
 {
     display: flex;
     flex-flow: row nowrap;
-    background-color: beige;
+    background-color: rgb(245, 245, 220);
     height: 100dvh;
     width: 100dvw;  
 }
@@ -44,7 +45,7 @@
 
 .title-container > h1
 {
-    font-family: 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 400%;
 }
 
@@ -85,17 +86,22 @@ a
 {
     --width:50%;
     --height:33.3333333%;
-    width: var(--width);
-    height: var(--height);
-    background-color: beige;
-    border: solid 0.1dvw black;
+    --margin:0.5%;
+
+    margin: var(--margin);
+    width: calc(var(--width) - 2*var(--margin));
+    height: calc(var(--height) - 2*var(--margin));
+
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-size: 8dvw;
+    background-color: rgb(234, 158, 141);
 }
 
 .index-box:hover
 {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(28, 40, 38);
+    color: white;
 }
