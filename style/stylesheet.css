@@ -1,34 +1,55 @@
 
+html
+{
+    overflow-x:hidden;
+}
+
+:root
+{
+    --beige-color:rgb(245, 245, 220);
+    --pink-color:rgb(234, 158, 141);
+    --red-color:rgb(214, 69, 80);
+    --black-color:rgb(28, 40, 38);
+    --blue-color:rgb(53, 129, 184);
+}
+
 *
 {
     box-sizing: border-box;
-    margin:0;
-    overflow-x:hidden;
+    margin: 0;
 }
 
 .Page
 {
     display: flex;
     flex-flow: row nowrap;
-    background-color: rgb(245, 245, 220);
+    background-color: var(--beige-color);
     height: 100dvh;
     width: 100dvw;  
 }
 
-.SmallColumn
+.Column
 {
     height: 100dvh;
-    width: 40dvw;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
 }
 
-.BigColumn
+.Column--Small
 {
-    height: 100dvh;
+    width: 40dvw;
+    flex-wrap: nowrap;
+}
+
+.Column--Border
+{
+    border: 3px solid black;
+}
+
+.Column--Big
+{
     width: 60dvw;
-    display: flex;
-    flex-flow: column wrap;
+    flex-wrap: wrap;
 }
 
 .TitleContainer
@@ -53,10 +74,10 @@
 
 .VideoContainer
 {
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70%;
 }
 
 .VideoContainer__Video
@@ -67,30 +88,39 @@
     object-fit: scale-down;
 }
 
-.BigColumn__IndexBox
+.Column__ClickableBox
 {
     --width:50%;
-    --height:33%;
+    --height:33.3%;
     --margins-horizontal:0.5%;
     --margins-vertical:0.5%;
 
+    box-sizing: border-box;
     margin: var(--margins-vertical) var(--margins-horizontal) var(--margins-vertical);
     width: calc(var(--width) - 2*var(--margins-horizontal));
     height: calc(var(--height) - 2*var(--margins-vertical));
 
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     
+    transition: all 0.3s ease;
     font-size: 8dvw;
-    color: black;
     text-decoration: none;
-    background-color: rgb(234, 158, 141);
+    background-color: var(--pink-color);
 }
 
-.BigColumn__IndexBox:hover
+.Column__ClickableBox:hover
 {
-    background-color: rgb(28, 40, 38);
-    color: white;
+    background-color: var(--red-color);
+}
+
+.Text
+{
+    color: var(--black-color);
+}
+
+.Column__Text
+{
+    overflow-y: hidden;
 }
