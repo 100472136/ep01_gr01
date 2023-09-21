@@ -1,9 +1,4 @@
 
-html
-{
-    overflow-x:hidden;
-}
-
 :root
 {
     --beige-color:rgb(245, 245, 220);
@@ -30,15 +25,36 @@ html
 
 .Column
 {
-    height: 100dvh;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.Column--Grow
+{
+    flex-grow:1;
+}
+
+.Column--NoGrow
+{
+    flex-grow: 0;
+}
+
+.Column--DirectionColumn
+{
     flex-direction: column;
+}
+
+.Column--DirectionRow
+{
+    flex-direction: row;
 }
 
 .Column--Small
 {
-    width: 40dvw;
-    flex-wrap: nowrap;
+    width: 40%;
 }
 
 .Column--Border
@@ -48,8 +64,22 @@ html
 
 .Column--Big
 {
-    width: 60dvw;
+    width: 60%;
+}
+
+.Column--Normal
+{
+    width:50%;
+}
+
+.Column--Wrap
+{
     flex-wrap: wrap;
+}
+
+.Column--NoWrap
+{
+    flex-wrap: nowrap;
 }
 
 .TitleContainer
@@ -90,17 +120,18 @@ html
 
 .Column__ClickableBox
 {
-    --width:50%;
-    --height:33.3%;
-    --margins-horizontal:0.5%;
-    --margins-vertical:0.5%;
+    --width:100%;
+    --height:33%;
+    --margins-horizontal:0.5dvw;
+    --margins-vertical:0.5dvh;
 
-    box-sizing: border-box;
     margin: var(--margins-vertical) var(--margins-horizontal) var(--margins-vertical);
     width: calc(var(--width) - 2*var(--margins-horizontal));
     height: calc(var(--height) - 2*var(--margins-vertical));
 
+    box-sizing: border-box;
     display: flex;
+    flex-shrink: 1;
     align-items: center;
     justify-content: center;
     

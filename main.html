@@ -8,7 +8,7 @@
 
     <body>
         <div class="Page" id="P1">
-            <div class="Column Column--Small Column--Border">
+            <div class="Column Column--Small Column--Border Column--DirectionColumn">
                 <div class="TitleContainer">
                     <h1 class="Text TitleContainer__Title">RESTAURANTE</h1>
                     <h2 class="Text TitleContainer__Subtitle">Subtítulo de ejemplo</h2>
@@ -17,13 +17,17 @@
                     <img class="VideoContainer__Video" alt="Restaurant Video"src="/images/black_box.jpg">
                 </div>
             </div>
-            <div class="Column Column--Big">
-                <a  class ="Text Column__ClickableBox" href="#P1" title="Título">1</a>
-                <a  class ="Text Column__ClickableBox" href="#P2" title="Go to Page 2">2</a>
-                <a  class ="Text Column__ClickableBox" href="#P3" title="Go to Page 3">3</a>
-                <a  class ="Text Column__ClickableBox" href="#P4" title="Go to Page 4">4</a>
-                <a  class ="Text Column__ClickableBox" href="#P5" title="Go to Page 5">5</a>
-                <a  class ="Text Column__ClickableBox" href="#P6" title="Go to Page 6">6</a>
+            <div class="Column Column--Big Column--DirectionRow">
+                <div class="Column Column--Normal Column--DirectionColumn Column--NoWrap Column--Grow">
+                    <a  class ="Text Column__ClickableBox Column--Grow" href="#P1" title="Título">1</a>
+                    <a  class ="Text Column__ClickableBox Column--Grow" href="#P2" title="Go to Page 2">2</a>
+                    <a  class ="Text Column__ClickableBox Column--Grow" href="#P3" title="Go to Page 3">3</a>
+                </div>
+                <div class="Column Column--Normal Column--DirectionColumn Column--NoWrap Column--Grow">
+                    <a  class ="Text Column__ClickableBox Column--Grow" href="#P4" title="Go to Page 4">4</a>
+                    <a  class ="Text Column__ClickableBox Column--Grow" href="#P5" title="Go to Page 5">5</a>
+                    <a  class ="Text Column__ClickableBox Column--Grow" href="#P6" title="Go to Page 6">6</a>
+                </div>
             </div>
         </div>
 
