@@ -2,11 +2,12 @@
 :root
 {
     /*Paleta de colores*/
-    --beige-color:rgb(245, 245, 220);
-    --pink-color:rgb(234, 158, 141);
-    --red-color:rgb(214, 69, 80);
-    --black-color:rgb(28, 40, 38);
-    --blue-color:rgb(53, 129, 184);
+    --beige-color:#f8d7a4;
+    --pink-color:#ec4c45;
+    --red-color:#8a130e;
+    --maroon-color:#78100c;
+    --black-color:#3c342c;
+    --golden-color:#8e5a0a;
 
     /*medidas útiles*/
     --page-height:90dvh;
@@ -16,6 +17,8 @@
 {
     box-sizing: border-box;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: luminari, fantasy;
 }
 
 html
@@ -37,7 +40,7 @@ html
     height: calc(100dvh - var(--page-height));
 }
 
-.Footer
+#Footer
 {
     height: calc(100dvh - var(--page-height));
     position: fixed;
@@ -46,6 +49,12 @@ html
     right: 0;
     background-color: var(--black-color);
     z-index: 150;
+}
+
+#Footer > p
+{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .Column
@@ -81,6 +90,7 @@ html
     flex-shrink: 1;
     align-items: center;
     justify-content: center;
+    border: 5px outset var(--black-color);
     
     transition: all 0.3s ease;
     font-size: 8dvw;
@@ -99,6 +109,8 @@ html
 .Column__IndexBox:hover
 {
     background-color: var(--red-color);
+    color: var(--golden-color);
+    border-color: var(--golden-color);
 }
 
 .Column__Text
@@ -149,12 +161,15 @@ html
 .Container__Title
 {
     font-family: Arial, Helvetica, sans-serif;
+    font-family: luminari, fantasy;
+    color: var(--black-color);
     font-size: 50px;
-    font-size: 400%;
+    font-size: 600%;
 }
 
 .Container__Subtitle
 {
+    font-family: luminari, fantasy;
     font-size: 20px;
     font-size: 150%;
 }
