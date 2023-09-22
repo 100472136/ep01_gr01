@@ -8,6 +8,11 @@
     --blue-color:rgb(53, 129, 184);
 }
 
+html
+{
+    overflow-x: hidden;
+}
+
 *
 {
     box-sizing: border-box;
@@ -23,28 +28,24 @@
     width: 100dvw;  
 }
 
+/* COLUMN block has this properties by default*/
 .Column
 {
     height: 100%;
+    width: 50%;
+
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+
     box-sizing: border-box;
+    flex-direction: column;
 }
 
+/*COLUMN modifiers*/
 .Column--Grow
 {
     flex-grow:1;
-}
-
-.Column--NoGrow
-{
-    flex-grow: 0;
-}
-
-.Column--DirectionColumn
-{
-    flex-direction: column;
 }
 
 .Column--DirectionRow
@@ -52,14 +53,14 @@
     flex-direction: row;
 }
 
+.Column--Bordered
+{
+    border: 3px solid black;
+}
+
 .Column--Small
 {
     width: 40%;
-}
-
-.Column--Border
-{
-    border: 3px solid black;
 }
 
 .Column--Big
@@ -67,60 +68,52 @@
     width: 60%;
 }
 
-.Column--Normal
-{
-    width:50%;
-}
-
 .Column--Wrap
 {
     flex-wrap: wrap;
 }
 
-.Column--NoWrap
-{
-    flex-wrap: nowrap;
-}
-
-.TitleContainer
+.Container
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 50%;
+}
+
+.Container--Small
+{
     height: 30%;
 }
 
-.TitleContainer__Title
+.Container--Big
+{
+    height: 70%;
+}
+
+.Container__Title
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     font-size: 400%;
 }
 
-.TitleContainer__Subtitle
+.Container__Subtitle
 {
     font-size: 20px;
     font-size: 150%;
 }
 
-.VideoContainer
-{
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.VideoContainer__Video
+.Container__Video
 {
     --size:90%;
     width: var(--size);
     height: var(--size);
-    object-fit: scale-down;
+    object-fit: cover;
 }
 
-.Column__ClickableBox
+.Column__IndexBox
 {
     --height:33%;
     --width:100%;
@@ -147,13 +140,13 @@
     background-color: var(--pink-color);
 }
 
-.Column__ClickableBox--NoLeftMargin
+.Column__IndexBox--NoLeftMargin
 {
     margin-left: 0;
     width: calc(var(--width) - var(--margin-horizontal));
 }
 
-.Column__ClickableBox:hover
+.Column__IndexBox:hover
 {
     background-color: var(--red-color);
 }
