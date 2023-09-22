@@ -1,16 +1,15 @@
 
 :root
 {
+    /*Paleta de colores*/
     --beige-color:rgb(245, 245, 220);
     --pink-color:rgb(234, 158, 141);
     --red-color:rgb(214, 69, 80);
     --black-color:rgb(28, 40, 38);
     --blue-color:rgb(53, 129, 184);
-}
 
-html
-{
-    overflow-x: hidden;
+    /*medidas útiles*/
+    --page-height:90dvh;
 }
 
 *
@@ -19,16 +18,36 @@ html
     margin: 0;
 }
 
+html
+{
+    overflow-x: hidden;
+}
+
 .Page
 {
     display: flex;
     flex-flow: row nowrap;
     background-color: var(--beige-color);
-    height: 100dvh;
+    height: var(--page-height);
     width: 100dvw;  
 }
 
-/* COLUMN block has this properties by default*/
+#Bottom
+{
+    height: calc(100dvh - var(--page-height));
+}
+
+.Footer
+{
+    height: calc(100dvh - var(--page-height));
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black-color);
+    z-index: 150;
+}
+
 .Column
 {
     height: 100%;
@@ -40,77 +59,6 @@ html
 
     box-sizing: border-box;
     flex-direction: column;
-}
-
-/*COLUMN modifiers*/
-.Column--Grow
-{
-    flex-grow:1;
-}
-
-.Column--DirectionRow
-{
-    flex-direction: row;
-}
-
-.Column--Bordered
-{
-    border: 3px solid black;
-}
-
-.Column--Small
-{
-    width: 40%;
-}
-
-.Column--Big
-{
-    width: 60%;
-}
-
-.Column--Wrap
-{
-    flex-wrap: wrap;
-}
-
-.Container
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-}
-
-.Container--Small
-{
-    height: 30%;
-}
-
-.Container--Big
-{
-    height: 70%;
-}
-
-.Container__Title
-{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    font-size: 400%;
-}
-
-.Container__Subtitle
-{
-    font-size: 20px;
-    font-size: 150%;
-}
-
-.Container__Video
-{
-    --size:90%;
-    width: var(--size);
-    height: var(--size);
-    object-fit: cover;
 }
 
 .Column__IndexBox
@@ -142,6 +90,8 @@ html
 
 .Column__IndexBox--NoLeftMargin
 {
+    --width:100%;
+    --margin-horizontal: 0.5dvw;
     margin-left: 0;
     width: calc(var(--width) - var(--margin-horizontal));
 }
@@ -151,12 +101,83 @@ html
     background-color: var(--red-color);
 }
 
-.Text
-{
-    color: var(--black-color);
-}
-
 .Column__Text
 {
     overflow-y: hidden;
+}
+
+.Column--Grow
+{
+    flex-grow:1;
+}
+
+.Column--DirectionRow
+{
+    flex-direction: row;
+}
+
+.Column--Bordered
+{
+    border: 3px solid black;
+}
+
+.Column--Small
+{
+    width: 40%;
+}
+
+.Column--Big
+{
+    width: 60%;
+}
+
+.Column--Wrap
+{
+    flex-wrap: wrap;
+}
+
+
+.Container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.Container__Title
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-size: 400%;
+}
+
+.Container__Subtitle
+{
+    font-size: 20px;
+    font-size: 150%;
+}
+
+.Container__Video
+{
+    --size:90%;
+    width: var(--size);
+    height: var(--size);
+    object-fit: scale-down;
+}
+
+.Container--Small
+{
+    height: 30%;
+}
+
+.Container--Big
+{
+    height: 70%;
+}
+
+.Text
+{
+    color: var(--black-color);
 }
