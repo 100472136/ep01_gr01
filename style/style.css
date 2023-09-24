@@ -3,6 +3,11 @@
     --PageHeight:90dvh;
 }
 
+body, html
+{
+    scroll-snap-type: y proximity;
+}
+
 html
 {
     overflow-x: hidden;
@@ -12,7 +17,6 @@ html
 {
     box-sizing: border-box;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 a
@@ -29,6 +33,8 @@ body
 
 .Page
 {
+    scroll-snap-align: start;
+
     display: flex;
     flex-flow: row nowrap;
 
@@ -38,8 +44,6 @@ body
 
 .Column
 {
-    background-color: white;
-
     height: 100%;
     width: 50%;
 }
@@ -50,6 +54,26 @@ body
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+}
+
+.TextColumn
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15dvh 5dvw;
+}
+
+li:not(:last-child)
+{
+    margin-bottom: 1dvh;
+}
+
+.Orange
+{
+    background-color: orange;
 }
 
 .FlexGrid
@@ -71,19 +95,14 @@ body
     width: 60%;
 }
 
-.Center
-{
-    align-self: center;
-    justify-self: center;
-}
-
 .IndexBox
 {
     --gap: 0.5%;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    background-color: rgba(0,0,0,0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s ease;
 
-    font-size: 2em;
+    font-size: 3.5vh;
     text-align: center;
 
     width: calc(50% - var(--gap));
@@ -100,6 +119,12 @@ body
 .IndexBox:hover
 {
     background-color: orange;
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5dvh;
 }
 
 #Logo
