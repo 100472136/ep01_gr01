@@ -1,0 +1,134 @@
+:root
+{
+    --PageHeight:90dvh;
+}
+
+html
+{
+    overflow-x: hidden;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a
+{
+    color: inherit;
+    text-decoration:inherit;
+}
+
+body
+{
+    display: flex;
+    flex-flow: column;
+}
+
+.Page
+{
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 99dvw;
+    height: var(--PageHeight);
+}
+
+.Column
+{
+    position: relative;
+    background-color: white;
+
+    height: 100%;
+    width: 50%;
+}
+
+.FlexColumn
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.FlexGrid
+{
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.SmallWidth
+{
+    width: 40%;
+}
+
+.BigWidth
+{
+    width: 60%;
+}
+
+.Center
+{
+    align-self: center;
+    justify-self: center;
+}
+
+.IndexBox
+{
+    --gap: 0.5%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    font-size: 2em;
+    text-align: center;
+
+    width: calc(50% - var(--gap));
+    height: calc(100%/3 - var(--gap));
+    padding: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.IndexBox:hover
+{
+    background-color: orange;
+}
+
+#Logo
+{
+    object-fit: scale-down;
+    max-height: 30%;
+}
+
+#Footer
+{
+    box-sizing: border-box;
+    height: calc(100dvh - var(--PageHeight));
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+}
+
+#Bottom
+{
+    height: 10dvh;
+    width: 100dvw;
+}
+
+#FirstPageVideo
+{
+    object-fit: scale-down;
+    max-width: 90%;
+}

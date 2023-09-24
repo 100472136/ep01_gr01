@@ -1,60 +1,35 @@
 <!DOCTYPE html>
-<html lang="ES">
+<html lang="es">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style/stylesheet.css">
+        <link rel="stylesheet" href="/style/style.css">
         <title>Test Web de Restaurante</title>
     </head>
-
     <body>
+        <div id="Footer">
+        </div>
+
         <div class="Page" id="P1">
-            <div class="Column Column--Small">
-                <div class="Container Container--Small">
-                    <h1 class="Text Container__Title">CHEN'S</h1>
-                    <h2 class="Text Container__Subtitle">La mejor comida asiática en Galapagar</h2>
-                </div>
-                <div class="Container Container--Big">
-                    <video class="Container__Video" loop autoplay muted>
-                        <source src="/images/Chinese Food Stock Video-osilmSHeKOw.mp4" type="video/mp4">
-                    </video>
-                </div>
+            <div class="Column FlexColumn SmallWidth">
+                <img id="Logo" src="/images/logo_chens.jpg" alt="Logo CHENS">
+                <video id="FirstPageVideo" loop autoplay muted>
+                    <source src="/images/Chinese Food Stock Video-osilmSHeKOw.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="Column Column--Big Column--DirectionRow">
-                <div class="Column Column--Grow">
-                    <a  class ="Text Column__IndexBox Column--Grow" href="#P1" title="Título">Inicio</a>
-                    <a  class ="Text Column__IndexBox Column--Grow" href="#P2" title="Go to Page 2">2</a>
-                    <a  class ="Text Column__IndexBox Column--Grow" href="#P3" title="Go to Page 3">3</a>
-                </div>
-                <div class="Column Column--Grow">
-                    <a  class ="Text Column__IndexBox Column__IndexBox--NoLeftMargin Column--Grow" href="#P4" title="Go to Page 4">4</a>
-                    <a  class ="Text Column__IndexBox Column__IndexBox--NoLeftMargin Column--Grow" href="#P5" title="Go to Page 5">5</a>
-                    <a  class ="Text Column__IndexBox Column__IndexBox--NoLeftMargin Column--Grow" href="#P6" title="Go to Page 6">6</a>
-                </div>
+            <div class="Column BigWidth FlexGrid">
+                <a  class="IndexBox" href="#P1" title="Inicio">INICIO</a>
+                <a  class="IndexBox" href="#P2" title="Título">ENTRANTES</a>
+                <a  class="IndexBox" href="#P3" title="Título">POKE BOWLS</a>
+                <a  class="IndexBox" href="#P4" title="Título">RECOMENDACIONES DEL CHEF</a>
+                <a  class="IndexBox" href="#P5" title="Título">POSTRES</a>
+                <a  class="IndexBox" href="#P6" title="Título">DONDE ENCONTRARNOS</a>
             </div>
         </div>
 
         <div class="Page" id="P2">
-            <div class="Column Column--Big Column--Test">
-                <p class="Text Column__Text">
-                    Poner aquí texto de la página 2
-                </p>
-            </div>
-            <div class="Column Column--Small">
-            </div>
         </div>
 
         <div class="Page" id="P3">
-            <div class="Column Column--Small">
-            </div>
-            <div class="Column Column--Big">
-                <div class="Container">
-                    <h1 class="Container__Title">IMAGES</h1>
-                </div>
-            </div>
-        </div>
-
-        <div id="Footer">
-            <p>PONER AQUÍ LINKS RELEVANTES Y DEMÁS</p>
         </div>
 
         <div id="Bottom"></div>
