@@ -56,24 +56,32 @@ body
     justify-content: space-around;
 }
 
-.TextColumn
+li
 {
-    display: flex;
-    flex-flow: column nowrap;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15dvh 5dvw;
+    list-style-type: none;
+    font-weight: bold;
 }
 
 li:not(:last-child)
 {
-    margin-bottom: 1dvh;
+    margin-bottom: 2dvh;
 }
 
-.Orange
+li>ul>li
+{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.Accent
 {
     background-color: orange;
+    border: 2px solid black;
+}
+
+.Grey
+{
+    background-color: rgba(0,0,0,0.3);
 }
 
 .FlexGrid
