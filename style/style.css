@@ -144,15 +144,19 @@ h1
 
 #Footer
 {
-    box-sizing: border-box;
     height: calc(100dvh - var(--PageHeight));
-    padding: 20px;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: black;
     z-index: 1;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
 }
 
 #Bottom
@@ -169,7 +173,47 @@ h1
 
 .TextContainer
 {
-    padding:min(10%, 10vdh) min(5%, 5px);
+    padding:min(10%, 10dvh) min(5%, 5px);
+}
+
+.FooterLink
+{
+    height: 100%;
+    flex-basis: 30%;
+    flex-grow: 1;
+}
+
+.FooterContainer
+{
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s ease;
+}
+
+
+.FooterText
+{
+    color: white;
+}
+
+.FooterImage
+{
+    height: calc(100dvh - var(--PageHeight) - 5dvh);
+    object-fit: scale-down;
+}
+
+.FooterLink
+{
+
+}
+
+.FooterContainer:hover
+{
+    background-color: grey;
 }
 
 /*PANTALLA ORDENADOR*/
@@ -258,8 +302,7 @@ h1
         overflow-x: scroll;
         overflow-y: hidden;
         scroll-snap-type: x mandatory;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
     }
 
     .Dish
@@ -270,21 +313,12 @@ h1
         position: relative;
     }
 
-    .Dish:nth-child(-n+2)
-    {
-        margin-left:10%;
-    }
-
-    .Dish:nth-last-child(-n+2)
-    {
-        margin-right:10%;
-    }
-
     .DishImage
     {
         object-fit: scale-down;
         height: 100%;
         width: 100%;
+        border: 1px solid black;
     }
 
     .DishFooter
@@ -292,7 +326,7 @@ h1
         text-align: center;
         display: block;
         position: absolute;
-        bottom: 1%;
+        bottom: 5%;
         width: 90%;
         left: 5%;
         background-color: rgba(255,255,255,0.6);
@@ -316,6 +350,16 @@ h1
     }
 
     .BigWidth
+    {
+        display: none;
+    }
+
+    li
+    {
+        font-size: max(2dvh, 3dvw);
+    }
+
+    .FooterText
     {
         display: none;
     }
