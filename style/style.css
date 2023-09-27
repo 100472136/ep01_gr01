@@ -8,7 +8,7 @@ body, html
     scroll-snap-type: y mandatory;
 }
 
-html
+body
 {
     overflow-x: hidden;
 }
@@ -154,9 +154,8 @@ h1
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    align-content: space-around;
 }
 
 #Bottom
@@ -204,11 +203,6 @@ h1
 {
     height: calc(100dvh - var(--PageHeight) - 5dvh);
     object-fit: scale-down;
-}
-
-.FooterLink
-{
-
 }
 
 .FooterContainer:hover
